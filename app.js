@@ -14,9 +14,12 @@ const express = require('express');
 const hbs = require('hbs');
 
 const app = express();
+const sessionManager = require('./config/session');
 
 // ℹ️ This function is getting exported from the config folder. It runs most middlewares
 require('./config')(app);
+
+sessionManager(app)
 
 // default value for title local
 const projectName = 'lab-express-basic-auth';

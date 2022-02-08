@@ -10,8 +10,11 @@ router.get('/register', authCtrl.register)
 // A2. Signup - Enviar Formulario
 router.post('/register', authCtrl.registerForm)
 
-// B. Login - Obtener página
-// router.get('/login', authCtrl.login)
+// B1. Login - Obtener página
+router.get('/login', authCtrl.login)
+
+// B2. Login - Enviar formulario
+router.get('/login', authCtrl.loginForm)
 
 // Exportaciones
 module.exports = router;
